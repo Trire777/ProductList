@@ -25,32 +25,26 @@
                                     <rect key="frame" x="0.0" y="0.0" width="376" height="57.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN4-Lp-Tje">
-                                            <rect key="frame" x="291" y="19" width="103" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RN4-Lp-Tje">
+                                            <rect key="frame" x="271" y="19" width="123" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Product name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYZ-qe-6ek">
-                                            <rect key="frame" x="33" y="11" width="108" height="35.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYZ-qe-6ek">
+                                            <rect key="frame" x="20" y="18" width="142" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="IYZ-qe-6ek" firstAttribute="leading" secondItem="vhv-Um-74V" secondAttribute="leading" constant="20" symbolic="YES" id="3EQ-SW-6z9"/>
-                                        <constraint firstItem="IYZ-qe-6ek" firstAttribute="centerY" secondItem="vhv-Um-74V" secondAttribute="centerY" id="7FX-Tj-iLI"/>
-                                        <constraint firstItem="IYZ-qe-6ek" firstAttribute="leading" secondItem="vhv-Um-74V" secondAttribute="leadingMargin" id="AhC-qV-G8d"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="RN4-Lp-Tje" secondAttribute="trailing" id="FDX-2H-Lc0"/>
-                                        <constraint firstItem="RN4-Lp-Tje" firstAttribute="leading" secondItem="IYZ-qe-6ek" secondAttribute="trailing" constant="20" id="I8u-Ln-1Nj"/>
-                                        <constraint firstItem="RN4-Lp-Tje" firstAttribute="leading" secondItem="IYZ-qe-6ek" secondAttribute="trailing" constant="8" id="OOy-59-4vy"/>
-                                        <constraint firstItem="IYZ-qe-6ek" firstAttribute="top" secondItem="vhv-Um-74V" secondAttribute="topMargin" id="exn-h2-hNA"/>
-                                        <constraint firstItem="RN4-Lp-Tje" firstAttribute="leading" secondItem="IYZ-qe-6ek" secondAttribute="trailing" constant="8" symbolic="YES" id="hYj-IA-8sh"/>
-                                        <constraint firstItem="RN4-Lp-Tje" firstAttribute="centerY" secondItem="vhv-Um-74V" secondAttribute="centerY" id="jyF-jI-320"/>
-                                        <constraint firstItem="RN4-Lp-Tje" firstAttribute="trailing" secondItem="vhv-Um-74V" secondAttribute="trailingMargin" constant="6" id="w2T-VU-u03"/>
-                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="productCountLabel" destination="RN4-Lp-Tje" id="ukC-hT-dQj"/>
+                                    <outlet property="productNameLabel" destination="IYZ-qe-6ek" id="HSi-Tm-OlF"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -59,10 +53,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="9Zd-F6-Sn3"/>
-                    <connections>
-                        <outlet property="productCountLabel" destination="RN4-Lp-Tje" id="srW-Gf-5A1"/>
-                        <outlet property="productNameCell" destination="IYZ-qe-6ek" id="XZr-gW-ho5"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YS3-mv-Lfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

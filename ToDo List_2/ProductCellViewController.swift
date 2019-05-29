@@ -10,17 +10,22 @@ import UIKit
 
 class ProductCellViewController: UITableViewController {
     
-    @IBOutlet weak var productNameCell: UILabel!
-    
-    @IBOutlet weak var productCountLabel: UILabel!
     
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath)
+        
+        if let productCell = cell as? ProductCell {
+            
+            productCell.productNameLabel.text = "Product \(indexPath.row)"
+            productCell.productCountLabel.text = "\(indexPath.row)"
+            
+        }
+        
         
         return cell
     }

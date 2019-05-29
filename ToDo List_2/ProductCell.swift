@@ -8,9 +8,11 @@
 
 import UIKit
 
+
+
 class ProductCell: UITableViewCell {
     
-    
-    
+    @IBOutlet weak var productNameLabel: UILabel!
+    @IBOutlet weak var productCountLabel: UILabel!
     
 }
