@@ -6,10 +6,11 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Мои покупки-->
         <scene sceneID="zsR-ck-RbZ">
             <objects>
                 <tableViewController id="3Rc-3N-oH2" customClass="ProductCellViewController" customModule="ToDo_List_2" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,6 +45,7 @@
                                 <connections>
                                     <outlet property="productCountLabel" destination="RN4-Lp-Tje" id="ukC-hT-dQj"/>
                                     <outlet property="productNameLabel" destination="IYZ-qe-6ek" id="HSi-Tm-OlF"/>
+                                    <segue destination="qq0-cs-r7i" kind="show" id="xlF-Hb-TgH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,11 +54,42 @@
                             <outlet property="delegate" destination="3Rc-3N-oH2" id="dK1-2k-Ksx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="9Zd-F6-Sn3"/>
+                    <navigationItem key="navigationItem" title="Мои покупки" largeTitleDisplayMode="always" id="9Zd-F6-Sn3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YS3-mv-Lfn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="940.57971014492762" y="-5.3571428571428568"/>
+        </scene>
+        <!--Product Detail-->
+        <scene sceneID="qSd-0h-mKc">
+            <objects>
+                <viewController id="qq0-cs-r7i" customClass="ProductDetail" customModule="ToDo_List_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WXw-1h-PJr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9B-QJ-utl">
+                                <rect key="frame" x="0.0" y="437.5" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W9B-QJ-utl" firstAttribute="centerY" secondItem="WXw-1h-PJr" secondAttribute="centerY" id="Umh-ku-SzR"/>
+                            <constraint firstItem="W9B-QJ-utl" firstAttribute="leading" secondItem="G0R-wd-8z0" secondAttribute="leading" id="h34-b3-UCW"/>
+                            <constraint firstItem="W9B-QJ-utl" firstAttribute="centerX" secondItem="WXw-1h-PJr" secondAttribute="centerX" id="m1K-Mi-um0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G0R-wd-8z0"/>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="W9B-QJ-utl" id="ooZ-Nj-ctM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQm-RA-huu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1629" y="6"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="K2d-4a-rGE">
